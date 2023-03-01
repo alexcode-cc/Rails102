@@ -8,6 +8,7 @@ class BoardsController < ApplicationController
 
   # GET /boards/1 or /boards/1.json
   def show
+    set_posts
   end
 
   # GET /boards/new
@@ -61,6 +62,10 @@ class BoardsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_board
       @board = Board.find(params[:id])
+    end
+
+    def set_posts
+      @posts = @board.posts 
     end
 
     # Only allow a list of trusted parameters through.
