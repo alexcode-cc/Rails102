@@ -8,6 +8,6 @@
 5.times do |i|
   Board.create(name: "board ##{i+1}")
   2.times do |j|
-    Post.create(title: "title for b#{i+1} p#{j+1}", content: "content for board ##{i+1} post ##{j+1}")
+    Post.create(title: "title for b#{i+1} p#{j+1}", content: "content for board ##{i+1} post ##{j+1}", board_id: i+1)
   end
 end
