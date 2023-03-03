@@ -13,6 +13,12 @@ gem 'sqlite3'
 # Use devise for user management
 gem 'devise'
 # Use Puma as the app server
+# capistrano
+gem 'capistrano-rails'
+gem 'capistrano-passenger'
+gem 'capistrano-rvm'
+gem 'ed25519', '>= 1.2'
+gem 'bcrypt_pbkdf', '>= 1.0'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
