@@ -7,9 +7,14 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
+#set :stage, "staging"
+#set :deploy_env, "staging"
+#set :ruby_env, "staging"
+#set :rails_env, "staging"
+set :env_vars, RAILS_ENV="staging"
 set :branch, "main"
-#server "192.168.0.196", user: "deploy", roles: %w{app db web}, my_property: :my_value
-server "192.168.0.87", user: "deploy", roles: %w{app db web}, my_property: :my_value
+server "192.168.0.196", user: "deploy", roles: %w{app db web}, my_property: :my_value
+#server "192.168.0.87", user: "deploy", roles: %w{app db web}, my_property: :my_value
 
 
 # role-based syntax
